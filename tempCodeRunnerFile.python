@@ -1,3 +1,23 @@
+#DT-13-array-rotation
+def rotate_array(nums, k):
+   
+    n = len(nums)
+    k %= n  
+    def reverse(nums, start, end):
+        while start < end:
+            nums[start], nums[end] = nums[end], nums[start]
+            start += 1
+            end -= 1
+    
+   
+    reverse(nums, 0, n - 1)
+ 
+    reverse(nums, 0, k - 1)
+   
+    reverse(nums, k, n - 1)
+    
+    return nums
+    
 #Longest Substring Without Repeating CharactersDescription: Given a string, find the length of the longest substring without repeating characters. Input: "abcabcbb"
 #Output: 3 
 
@@ -16,4 +36,5 @@ def length_of_longest_substring(s: str) -> int:
 
 input_str = "abcabcbb"
 output = length_of_longest_substring(input_str)
-print(output) 
+print(output)
+#main
