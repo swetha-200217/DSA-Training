@@ -1,7 +1,7 @@
 def rotate_array(nums, k):
    
     n = len(nums)
-    k %= n k
+    k %= n 
     
     def reverse(nums, start, end):
         while start < end:
