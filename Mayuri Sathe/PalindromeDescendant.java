@@ -1,5 +1,7 @@
 public class PalindromeDescendant {
         public static boolean isPalindrome(int num) {
+public class PalindromeDescendant {
+    public static boolean isPalindrome(int num) {
         String str = Integer.toString(num);
         String reversedStr = new StringBuilder(str).reverse().toString();
         return str.equals(reversedStr);
@@ -40,10 +42,14 @@ public class PalindromeDescendant {
 }
 public class PalindromeDescendant {
         public static boolean isPalindrome(int num) {
+public class PalindromeDescendant {
+     public static boolean isPalindrome(int num) {
         String str = Integer.toString(num);
         String reversedStr = new StringBuilder(str).reverse().toString();
         return str.equals(reversedStr);
     }
+    public static Integer getDescendant(int num) {
+        String str = Integer.toString(num);
     public static Integer getDescendant(int num) {
         String str = Integer.toString(num);
         if (str.length() % 2 != 0) {
@@ -72,9 +78,25 @@ public class PalindromeDescendant {
         }
                 return false; 
     }
+    public static boolean PalindromeDescendant(int num) {
+            if (isPalindrome(num)) {
+            return true;
+        }
+         while (num >= 10) { 
+            Integer descendant = getDescendant(num);
+            if (descendant == null) {
+                return false;
+            }
+            if (isPalindrome(descendant)) {
+                return true;
+            }
+            num = descendant;
+        }
+                return false; // No palindromes found
+    }
     public static void main(String[] args) {
         System.out.println(PalindromeDescendant(11211)); 
-        System.out.println(PalindromeDescendant(130011)); 
-       
+        System.out.println(PalindromeDescendant(130011));   
     }
+}
 }
