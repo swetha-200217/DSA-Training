@@ -1,4 +1,5 @@
-public class secondLargest {
+import java.util.*;
+public class secondLargest{
     public static int secondLargest(int[] arr){
         int n = arr.length;
         boolean swapped;
@@ -16,9 +17,9 @@ public class secondLargest {
                 break;
             }
         }
-        return arr[arr.length - 2];
+        return arr[arr.length-2];
     }
-    public static void main(String[] args) {
+    public static void main(String[] args){
         System.out.println(secondLargest(new int[]{3, 2, 1, 5, 6, 4}));
     }
 }

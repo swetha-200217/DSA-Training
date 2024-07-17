@@ -1,5 +1,6 @@
 public class PalindromeDescendant {
         public static boolean isPalindrome(int num) {
+    public static boolean isPalindrome(int num) {
         String str = Integer.toString(num);
         String reversedStr = new StringBuilder(str).reverse().toString();
         return str.equals(reversedStr);
